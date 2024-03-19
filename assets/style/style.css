@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("/assets/images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+#welcome {
+  text-align: center;
+  margin-top: 5%;
+  text-shadow: 2px 2px 6px #29120b;
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+#shortcut {
+  .shortcut_board {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .shortcut_list {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255,255,255, 0.3);
+    border-radius: 1.5rem;
+    height: 20rem;
+    width: 15rem;
+    padding: 0 1rem;
+
+    li {
+      list-style: none;
+      padding: 0.3rem 0;
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+      }
+  }
+}
