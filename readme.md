@@ -20,8 +20,8 @@ Notre interface utilisateur intuitive garantit une navigation fluide et une util
 
 Prêt(e) à simplifier votre routine en ligne ? Ouvrez votre navigateur et laissez notre dashboard d'accueil vous accompagner tout au long de votre journée !
 
-En voici une illustation :
+En voici une illustration :
 ![illustration de la page](/assets/images/dashboard_wild.gif);
 
-Cependant, j'ai complétement oublié d'utiliser git au cours de mon développement (Malgré les conseils insistants de mon formateur) et une souris maligne est venue tout casser pendant ma pause café.
-Peux tu m'aider à corriger les erreurs ? Je crois que seuls les fichiers `.js` sont modifiés.
+Cependant, j'ai complètement oublié d'utiliser git au cours de mon développement (Malgré les conseils insistants de mon formateur) et une souris maligne est venue tout casser pendant ma pause café.
+Peux-tu m'aider à corriger les erreurs ? Je crois que seuls les fichiers `.js` sont modifiés.
