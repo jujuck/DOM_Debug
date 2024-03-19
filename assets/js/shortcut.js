@@ -13,7 +13,7 @@ const shortCuts = [
   },
   {
     id: 3,
-    label: "Notion",
+    labels: "Notion",
     url: "https://www.notion.so/fr-fr",
     category: "Tools",
   },
@@ -43,7 +43,7 @@ const shortCuts = [
   },
   {
     id: 8,
-    label: "Email",
+    labels: "Email",
     url: "https://www.google.com/intl/fr/gmail/about/",
     category: "Home",
   },

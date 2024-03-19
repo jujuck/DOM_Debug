@@ -1,7 +1,10 @@
-const date = document.querySelector("date");
+const date = document.querySelector("#date");
 const time = document.querySelector("time");
-const shortCut = document.getElementById("shortCut");
+const shortCut = document.getElementById("shortcut");
 let intervalId = null;
+
+// Import de la data via la HTML
+console.log(shortCuts);
 
 /**
  * Gestion de la remise à zéro du tableau de bord de bienvenue
@@ -22,11 +25,11 @@ const createWelcomBoard = () => {
 
   // Création du tableau de bord de bienvenue Heure et Date
   date.textContent = `Nous sommes le : ${new Date().toLocaleDateString()}`;
-  times.textContent = `Et il est : ${new Date().toLocaleTimeString()}`;
+  time.textContent = `Et il est : ${new Date().toLocaleTimeString()}`;
 
   // Mise à jour de l'heure toutes les secondes
   intervalId = setInterval(() => {
-    times.textContent = `Et il est : ${new Date().toLocaleTimeString()}`;
+    time.textContent = `Et il est : ${new Date().toLocaleTimeString()}`;
   }, 3000);
 };
 
@@ -37,14 +40,16 @@ const createWelcomBoard = () => {
  * @returns string
  */
 const createList = (list, shortcuts) => {
-  const items = shortcut.filter((item) => item.category !== list);
+  const items = shortcuts.filter((item) => item.category !== list);
   return `<div class="shortcut__list">
     <h2>${list}</h2>
     <ul>
       ${items
         .map(
           (item) =>
-            `<li><a href="${item.url}" target="_blank">${item.label}</a></li>`
+            `<li>
+              <a href="${item.link}" target="_blank">${item.label}</a>
+            </li>`
         )
         .join("")}
     </ul>
@@ -57,8 +62,10 @@ const createList = (list, shortcuts) => {
 
  */
 const getShortCupBoard = () => {
-  const lists = new Set(shortcuts.map((item) => item.category));
-  return `${[...lists].map((list) => createList(list, shortcuts)).join("")}`;
+  const lists = new Set(shortCuts.map((item) => item.category));
+  return `${[...lists]
+    .map((list) => createList(list.label, shortCuts))
+    .join("")}`;
 };
 
 /**
@@ -69,9 +76,9 @@ const createShortCutBoard = () => {
   resetWelcomBoard();
 
   // Création du tableau de bord des raccourcis
-  const div = documents.createElement("div");
+  const div = document.createElement("div");
   div.classList.add("shortcut_board");
-  div.innerHTML = getShortCupBoard();
+  div.innerHTML(getShortCupBoard());
   shortCut.appendChild(div);
 };
 
@@ -94,7 +101,7 @@ render();
  * Mise en place de l'écouteur de touche sur la touche "D"
  */
 document.addEventListener("keypress", (e) => {
-  if (e.key.toUpperCase() === "CAT") {
+  if (e.key.toUpperCase() === "DD") {
     render();
   }
 });
